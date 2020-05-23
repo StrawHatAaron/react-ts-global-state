@@ -1,13 +1,13 @@
 import { createContext, useContext } from 'react';
 
-type ITheme = {
+export type ITheme = {
   backgroundColor: string;
   color: string;
+  toggleTheme:() => void;
 }
 // The standard way to create context. It takes an initial value object
-const ThemeContext = createContext<ITheme>({
+export const ThemeContext = createContext<ITheme>({
   backgroundColor: 'black',
   color: 'white',
+  toggleTheme: () => {}
 })
-// Accessing context in a child component
-const themeContext = useContext<ITheme>(ThemeContext);
