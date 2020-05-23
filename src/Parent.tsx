@@ -7,10 +7,16 @@ export default function Parent() {
 
     // Accessing context in a child component
     const themeContext = useContext<ITheme>(ThemeContext);
+    console.log(themeContext);
 
     return (
         <ThemeContext.Consumer>
-            {value => value.backgroundColor}        
+            {({darkMode, toggleTheme}) => (
+                <button onClick={toggleTheme}>
+                    {darkMode}
+                </button>
+                    
+            )}        
         </ThemeContext.Consumer>
     )
 }
