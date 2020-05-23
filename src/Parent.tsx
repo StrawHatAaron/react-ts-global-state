@@ -15,7 +15,6 @@ export default function Parent() {
                 <button onClick={toggleTheme}>
                     {darkMode}
                 </button>
-                    
             )}        
         </ThemeContext.Consumer>
     )

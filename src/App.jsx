@@ -27,7 +27,13 @@ class App extends React.Component{
     return (
       <div>
         <ThemeContext.Provider value={this.state}>
-          Hey App What do you see? <Parent/>
+          Hey App What do you see?
+          <ThemeContext.Consumer>
+          {({darkMode, }) => (    
+            <div>{darkMode}</div>
+          )}
+          </ThemeContext.Consumer>
+          <Parent/>
         </ThemeContext.Provider>
       </div>
     );
