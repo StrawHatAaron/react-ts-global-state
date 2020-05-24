@@ -4,4 +4,8 @@ Of course you will not only want to pass state down the component tree with useS
 
 So we ask ourselves.. How do we pass state back up the tree or manage it globally?
 
-Well apparently Context can get me there.
+###### Look at the simply named code and how all parents, childs and leafs have the same state.
+
+```
+App.jsx --> Parent.tsx --> Child.tsx --> ChildLeaf.tsx
+```

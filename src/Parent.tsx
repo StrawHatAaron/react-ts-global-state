@@ -12,9 +12,12 @@ export default function Parent() {
     return (
         <ThemeContext.Consumer>
             {({darkMode, toggleTheme}) => (
-                <button onClick={toggleTheme}>
-                    {darkMode}
-                </button>
+                <div>
+                    <button onClick={toggleTheme}>
+                        {darkMode}
+                    </button>
+                    <Child/>
+                </div>
             )}        
         </ThemeContext.Consumer>
     )
